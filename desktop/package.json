@@ -1,4 +1,15 @@
 {
+  "name": "Data",
+  "version": "0.0.1",
+  "description": "Clipboard and document sync agent for Windows",
+  "main": "src/main/main.ts",
+  "author": "George Koulaxidis",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json && concurrently -k -n tsc,app \"tsc -p tsconfig.json -w --preserveWatchOutput\" \"electronmon .\"",
+    "start": "npm run build && electron .",
+    "dist": "npm run build && electron-builder --win"
+  },
   "devDependencies": {
     "@types/node": "^26.6.6",
     "concurrently": "^9.2.5",

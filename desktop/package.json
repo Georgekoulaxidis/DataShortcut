@@ -2,7 +2,7 @@
   "name": "Data",
   "version": "0.0.1",
   "description": "Clipboard and document sync agent for Windows",
-  "main": "src/main/main.ts",
+  "main": "dist/main/main.js",
   "author": "George Koulaxidis",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -17,5 +17,9 @@
     "electron-builder": "^26.18.0",
     "electronmon": "^2.0.4",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "fastify": "^5.12.8",
+    "selfsigned": "^5.5.0"
   }
 }
